@@ -2,7 +2,7 @@
   // Update 'version' if you need to refresh the cache
   const cacheVersion = 'v1.0.3';
   const hash = '1462636670';
-  const baseUrl = 'https://justb3a.com';
+  const baseUrl = 'https://justbea.dev';
   const alwaysCache = [
     '/',
     '/offline/',
