@@ -11,8 +11,8 @@
   "links": {
     "authEndpoint": "https://indieauth.com/auth",
     "tokenEndpoint": "https://tokens.indieauth.com/token",
-    "micropub": "/micropub/",
-    "webmention": "/webmention/",
+    "webmention": "https://webmention.io/justbea.dev/webmention",
+    "pingback": "https://webmention.io/justbea.dev/xmlrpc",
     "twitter": "https://twitter.com/justb3a",
     "github": "https://github.com/justb3a"
   }

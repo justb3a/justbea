@@ -32,6 +32,8 @@ templateClass: iw_note
       <div class="e-content p-name  note--content">
         {{ content | safe }}
       </div>
+
+      {% include 'partials/webmentionlist.njk' %}
     </article>
 
     <nav class="nav-indieweb">

@@ -14,10 +14,10 @@
     <meta name="author" content="{{ metadata.author.name }}" />
     <link rel="canonical" href="{{ metadata.url }}" />
 
-    <link rel="authorization_endpoint" href="{{ metadata.links.authEndpoint }}" />
+    <link rel="webmention" href="{{ metadata.links.webmention }}" />
+    <link rel="pingback" href="{{ metadata.links.pingback }}" />
     <link rel="token_endpoint" href="{{ metadata.links.tokenEndpoint }}" />
-    <link rel="micropub" href="https://{{ metadata.url }}{{ metadata.links.micropub }}" />
-    <link rel="webmention" href="https://{{ metadata.url }}{{ metadata.links.webmention }}" />
+    <link rel="authorization_endpoint" href="{{ metadata.links.authEndpoint }}" />
     <link href="{{ metadata.links.twitter }}" rel="me" />
     <link href="{{ metadata.links.github }}" rel="me" />
     <link href="mailto:{{ metadata.author.email }}" rel="me" />
