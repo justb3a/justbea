@@ -1,0 +1,35 @@
+<section class="indieweb">
+  <h2>What's new?</h2>
+
+  {% for post in postslist | reverse %}
+    <article class="note h-entry">
+      {% if post.data.twitterId %}
+        <a href="https://twitter.com/@justb3a/status/{{ post.data.twitterId }}" rel="syndication" class="u-syndication  note--syndication">
+          {% set name = 'twitter' %}
+          {% include 'partials/_svg.njk' %}
+        </a>
+      {% endif %}
+      <div class="meta  note--meta">
+        <time class="dt-published" datetime="{{ post.date | htmlDateString }}">
+          <a class="u-url" href="{{ post.url }}">{{ post.date | readableDate }}</a>
+        </time>
+      </div>
+
+      <div class="note--tags">
+        {% for tag in post.data.tags %}
+          {%- if tag != "posts" -%}
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
+          {%- endif -%}
+        {% endfor %}
+      </div>
+
+      <div class="e-content p-name  note--content">
+        {{ post.data.description }}
+        <a href="{{ post.url | url }}" class="postlist-link">[read on]</a>
+      </div>
+    </article>
+  {% endfor %}
+
+  <a href="{{ 'notes' | url }}">[more]</a>
+</section>

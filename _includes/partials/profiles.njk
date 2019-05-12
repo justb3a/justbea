@@ -1,0 +1,49 @@
+<section class="section--profile  h-card  card">
+  <strong class="p-name  card--name">Bea David</strong>
+  <h2>Contact</h2>
+  <img class="hidden u-photo" aria-hidden="true" src="{{ '/' | url}}me.jpg" alt="Bea David" />
+  <ul class="list--links">
+    <li>
+      <a class="u-url" href="https://justb3a.com/" title="justb3a.com">
+        {% set name = 'earth' %}
+        {% include 'partials/_svg.njk' %}
+        https://justb3a.com
+      </a><br />
+    </li>
+    <li>
+      <a class="u-email" href="mailto:info@justb3a.com" title="get in touch">
+        {% set name = 'mail' %}
+        {% include 'partials/_svg.njk' %}
+        info@justb3a.com
+      </a>
+    </li>
+    <li>
+      <span class="p-locality">
+        {% set name = 'location' %}
+        {% include 'partials/_svg.njk' %}
+        Leipzig, Germany
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section class="section--profile  h-entry">
+  <h2 class="p-name">Profiles</h2>
+  <ul class="list--links">
+    <li class="h-item">
+      <a href="https://github.com/justb3a" rel="me" class="u-url  p-name" title="Github">
+        {% set name = 'github' %}
+        {% include 'partials/_svg.njk' %}
+        Github
+      </a>
+    </li>
+    <li class="h-item">
+      <a href="https://twitter.com/justb3a" rel="me" class="u-url  p-name" title="Twitter">
+        {% set name = 'twitter' %}
+        {% include 'partials/_svg.njk' %}
+        @justb3a
+      </a>
+    </li>
+  </ul>
+</section>
+

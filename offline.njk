@@ -1,0 +1,15 @@
+---
+layout: layouts/profilepage.njk
+permalink: /offline/
+eleventyExcludeFromCollections: true
+title: It seems like you are offline
+modifiers: grid__icon
+---
+<div class="p-summary  intro">
+  Oh no, it looks like your network connection isn't working right now.
+  Click here to get back to the <a href="{{ '/' | url }}">homepage</a>.
+</div>
+<div class="js-offline">
+  {% set name = 'offline' %}
+  {% include 'partials/_svg.njk' %}
+</div>

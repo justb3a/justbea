@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="no-js  no-touch">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <title>{{ metadata.title }} | {{ renderData.title or title or metadata.subtitle }}</title>
+    <meta name="keywords" content="{{ metadata.keywords }}" />
+    <meta name="description" content="{{ metadata.description or description or metadata.description }}" />
+    <meta name="robots" content="follow" />
+    <meta name="author" content="{{ metadata.author.name }}" />
+    <link rel="canonical" href="{{ metadata.url }}" />
+
+    <link rel="authorization_endpoint" href="{{ metadata.links.authEndpoint }}" />
+    <link rel="token_endpoint" href="{{ metadata.links.tokenEndpoint }}" />
+    <link rel="micropub" href="https://{{ metadata.url }}{{ metadata.links.micropub }}" />
+    <link rel="webmention" href="https://{{ metadata.url }}{{ metadata.links.webmention }}" />
+    <link href="{{ metadata.links.twitter }}" rel="me" />
+    <link href="{{ metadata.links.github }}" rel="me" />
+    <link href="mailto:{{ metadata.author.email }}" rel="me" />
+
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+  </head>
+
+  <body class="page--{{ templateClass }}">
+    <header class="header">
+
+      <div class="header__wrapper">
+        <div class="button--nav__wrapper">
+          <button class="button--nav js-button-nav" title="Show / hide navigation">
+            <strong>MENU</strong>
+            <span class="button--nav__inner"></span>
+          </button>
+        </div>
+
+        {% if permalink == '/' %}
+          <cite>
+            <a href="{{ metadata.url }}" title="Home" class="js-zen  zen">
+              Hello Indieweb
+              <noscript>Speak like a human.</noscript>
+            </a>
+          </cite>
+        {% endif %}
+      </div>
+
+      <div class="header__nav">
+        <div class="header__nav__wrapper">
+          {% set parameters = { 'area': 'main' } %}
+          {% include 'layouts/nav-main.njk' %}
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      {{ content | safe }}
+    </main>
+
+    <footer class="footer">
+      {% set parameters = { 'area': 'footer' } %}
+      {% include 'layouts/nav-main.njk' %}
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<div class="indieweb--me js-indieweb--me">
+  <img src="{{ '/img/me.jpg' | url }}" alt="Bea David">
+
+  <ul class="list--links">
+    <li class="h-item">
+      <a href="https://github.com/justb3a" rel="me" class="u-url  p-name">
+        {% set name = 'github' %}
+        {% include 'partials/_svg.njk' %}
+        Github
+      </a>
+    </li>
+    <li class="h-item">
+      <a href="https://twitter.com/justb3a" rel="me" class="u-url  p-name">
+        {% set name = 'twitter' %}
+        {% include 'partials/_svg.njk' %}
+        @justb3a
+      </a>
+    </li>
+    <li class="h-item">
+      <a class="u-email" href="mailto:info@justb3a.com">
+        {% set name = 'mail' %}
+        {% include 'partials/_svg.njk' %}
+        info@justb3a.com
+      </a>
+    </li>
+  </ul>
+</div>
+

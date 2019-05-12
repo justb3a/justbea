@@ -1,0 +1,19 @@
+{
+  "title": "justb3a",
+  "subtitle": "web development",
+  "keywords": "Web development, php, twig, html, javascript, ruby, sass, scss, nginx, apache, processwire, typo3, indieweb",
+  "url": "https://justb3a.com/",
+  "description": "Web development, CMS- and frontend integration.",
+  "author": {
+    "name": "Bea David",
+    "email": "info@justb3a.com"
+  },
+  "links": {
+    "authEndpoint": "https://indieauth.com/auth",
+    "tokenEndpoint": "https://tokens.indieauth.com/token",
+    "micropub": "/micropub/",
+    "webmention": "/webmention/",
+    "twitter": "https://twitter.com/justb3a",
+    "github": "https://github.com/justb3a"
+  }
+}

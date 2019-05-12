@@ -1,0 +1,10 @@
+<nav class="nav-{{ parameters.area }}" role="navigation" aria-label="Site Navigation">
+  <ul class="nav-{{ parameters.area }}__list">
+    {%- for nav in collections.nav | reverse -%}
+      <li>
+        {#% if nav.url == page.url %} nav-item-active{% endif %#}
+        <a class="u-url" href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

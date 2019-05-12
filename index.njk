@@ -1,0 +1,26 @@
+---
+layout: layouts/home.njk
+tags:
+  - nav
+navtitle: Home
+permalink: /
+templateClass: home
+---
+<h1>hey there.</h1>
+
+<div class="p-summary  intro">
+  <p>
+    I'm Bea David, a full stack web developer with focus on backend. I love to build web applications with just one step or less.<br />
+    In my free time I enjoy to stay on top of horses, motor bikes and hills. That's not always easy, but so far I'm happy with the outcome.
+  </p>
+</div>
+
+<div class="grid  grid--3">
+  <div class="grid__column  grid__column--span">
+    {% set postslist = collections.posts | head(-1) %}
+    {% include "partials/postslist.njk" %}
+  </div>
+  <div class="grid__column">
+    {% include 'partials/profiles.njk' %}
+  </div>
+</div>
