@@ -4,8 +4,10 @@ Personal web page build with eleventy.
 
 - test and adapt (markup) webmentions
 - notes navigation (prev / next)
+- note add location
 - transfer all notes
-- nav items order, add active state
+- nav items order -> use counter, add active state
+- favicon
 
 ## Post blue print
 
