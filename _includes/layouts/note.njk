@@ -23,7 +23,7 @@ templateClass: iw_note
 
       <div class="note--tags">
         {% for tag in tags %}
-          {%- if tag != "posts" -%}
+          {%- if tag != "notes" -%}
           {% set tagUrl %}/tags/{{ tag }}/{% endset %}
           <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
           {%- endif -%}

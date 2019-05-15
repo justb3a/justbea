@@ -1,7 +1,7 @@
 <section class="indieweb">
   <h2>What's new?</h2>
 
-  {% for post in postslist | reverse %}
+  {% for post in noteslist %}
     <article class="note h-entry">
       {% if post.data.twitterId %}
         <a href="https://twitter.com/@justb3a/status/{{ post.data.twitterId }}" rel="syndication" class="u-syndication  note--syndication">
@@ -17,7 +17,7 @@
 
       <div class="note--tags">
         {% for tag in post.data.tags %}
-          {%- if tag != "posts" -%}
+          {%- if tag != "notes" -%}
           {% set tagUrl %}/tags/{{ tag }}/{% endset %}
           <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
           {%- endif -%}

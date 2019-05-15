@@ -18,8 +18,8 @@ date: 2019-01-01
 
 <div class="grid  grid--3">
   <div class="grid__column  grid__column--span">
-    {% set postslist = collections.posts | head(-1) %}
-    {% include "partials/postslist.njk" %}
+    {% set noteslist = collections.notes | head(-1) %}
+    {% include "partials/noteslist.njk" %}
   </div>
   <div class="grid__column">
     {% include 'partials/profiles.njk' %}

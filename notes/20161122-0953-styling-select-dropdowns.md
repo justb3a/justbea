@@ -1,11 +1,11 @@
 ---
+layout: layouts/note.njk
 title: Styling select-dropdowns [1]
 description: Styling select-dropdowns
 date: 2016-11-22
 tags:
   - styling
   - css
-layout: layouts/post.njk
 ---
 # Styling select-dropdowns
 

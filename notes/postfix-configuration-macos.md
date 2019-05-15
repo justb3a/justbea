@@ -1,4 +1,5 @@
 ---
+layout: layouts/note.njk
 title: Postfix Configuration macOS
 description: little step-by-step guide to send emails from macOS on my local machine
 date: 2018-06-18
@@ -6,7 +7,6 @@ tags:
   - postfix
   - macos
   - sendmail
-layout: layouts/post.njk
 ---
 # Postfix Configuration macOS
 

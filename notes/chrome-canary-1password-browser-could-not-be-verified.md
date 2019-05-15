@@ -1,4 +1,5 @@
 ---
+layout: layouts/note.njk
 title: Chrome Canary - 1Password – Browser could not be verified
 description: 1Password stops working in Chrome Canary
 date: 2018-07-09
@@ -6,7 +7,6 @@ tags:
   - chrome
   - chromecanary
   - 1password
-layout: layouts/post.njk
 ---
 # 1Password stops working in Chrome Canary
 

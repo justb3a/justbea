@@ -1,11 +1,11 @@
 ---
+layout: layouts/note.njk
 title: Styling select-dropdowns [2]
 description: Styling select-dropdowns – Follow up
 date: 2017-09-13
 tags:
   - styling
   - css
-layout: layouts/post.njk
 ---
 Follow up: [Styling select-dropdowns](https://justbea.dev/notes/20161122-0953-styling-select-dropdowns/)
 

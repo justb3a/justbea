@@ -1,4 +1,5 @@
 ---
+layout: layouts/note.njk
 title: Get TTL
 description: Get TTL setup for a domain
 date: 2018-06-25
@@ -8,7 +9,6 @@ tags:
   - nameserver
   - timetolive
   - dns
-layout: layouts/post.njk
 ---
 ## Get TTL setup for a domain
 
