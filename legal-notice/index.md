@@ -4,6 +4,7 @@ title: Legal Notice
 tags:
   - nav
 navtitle: Legal Notice
+date: 2019-10-01
 ---
 ## Basic
 
