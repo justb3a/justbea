@@ -15,7 +15,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter(key, filters[key]);
   });
 
-  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+  eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
   eleventyConfig.addPassthroughCopy("src/assets");
 
   /* Markdown Plugins */
