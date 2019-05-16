@@ -3,8 +3,6 @@ Personal web page build with eleventy.
 ## @TODO:
 
 - test and adapt (markup) webmentions
-- notes navigation (prev / next)
-- notes add pagination
 - note add location
 - nav items -> add active state
 - favicon

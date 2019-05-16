@@ -36,18 +36,7 @@ templateClass: iw_note
       {% include 'partials/webmentionlist.njk' %}
     </article>
 
-    <nav class="nav-indieweb">
-      <a href="{{ '' | url }}">
-        {% set name = 'prev' %}
-        {% include 'partials/_svg.njk' %}
-        OLDER
-      </a>
-
-      <a href="{{ '' | url }}">
-        NEWER
-        {% set name = 'next' %}
-        {% include 'partials/_svg.njk' %}
-      </a>
-    </nav>
+    {% import "macros/pagination.njk" as macro with context %}
+    {{ macro.pagination('notes') }}
   </div>
 </div>

@@ -1,0 +1,35 @@
+{% macro pagination(collection) %}
+  {% set items = collections[collection] | reverse %}
+  {% set currentItemIndex = 0 %}
+  {% set countOfItems = items.length %}
+
+  {% for item in items %}
+    {% if item.url == page.url %}
+      {% set currentItemIndex = loop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  {% set nextItemIndex = currentItemIndex + 1  %}
+  {% set prevItemIndex = currentItemIndex - 1  %}
+
+  {% set nextItem = items[nextItemIndex] %}
+  {% set prevItem = items[prevItemIndex] %}
+
+  <nav class="nav-indieweb">
+    {% if prevItem %}
+      <a href="{{ prevItem.url | url }}" aria-label="{{ prevItem.data.title }}">
+        {% set name = 'prev' %}
+        {% include 'partials/_svg.njk' %}
+        NEWER
+      </a>
+    {% endif %}
+
+    {% if nextItem %}
+      <a href="{{ nextItem.url | url }}" aria-label="{{ nextItem.data.title }}">
+        OLDER
+        {% set name = 'next' %}
+        {% include 'partials/_svg.njk' %}
+      </a>
+    {% endif %}
+  </nav>
+{% endmacro %}
