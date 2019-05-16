@@ -31,5 +31,7 @@
     </article>
   {% endfor %}
 
-  <a href="{{ '/notes' | url }}">[more]</a>
+  {% if page.url != '/notes/' %}
+    <a href="{{ '/notes' | url }}">[more]</a>
+  {% endif %}
 </section>
