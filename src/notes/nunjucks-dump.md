@@ -7,6 +7,7 @@ tags:
   - eleventy
   - nunjucks
   - staticsite
+location: Leipzig
 ---
 ## How to dump a collection using eleventy and nunjucks
 

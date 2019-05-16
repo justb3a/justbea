@@ -1,0 +1,29 @@
+{% if post.data.twitterId %}
+  <a href="https://twitter.com/@justb3a/status/{{ post.data.twitterId }}" rel="syndication" class="u-syndication  note--syndication">
+    {% set name = 'twitter' %}
+    {% include 'partials/_svg.njk' %}
+  </a>
+{% endif %}
+
+{% if post.data.location %}
+  <div class="note--location p-location h-card">
+    {% set name = 'location' %}
+    {% include 'partials/_svg.njk' %}
+    <span class="p-name">{{ post.data.location }}</span>
+  </div>
+{% endif %}
+
+<div class="meta  note--meta">
+  <time class="dt-published" datetime="{{ post.date | htmlDateString }}">
+    <a class="u-url" href="{{ post.url }}">{{ post.date | readableDate }}</a>
+  </time>
+</div>
+
+<div class="note--tags">
+  {% for tag in post.data.tags %}
+    {%- if tag != "notes" -%}
+    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+    <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
+    {%- endif -%}
+  {% endfor %}
+</div>

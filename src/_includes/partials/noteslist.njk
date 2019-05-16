@@ -3,26 +3,7 @@
 
   {% for post in noteslist | reverse %}
     <article class="note h-entry">
-      {% if post.data.twitterId %}
-        <a href="https://twitter.com/@justb3a/status/{{ post.data.twitterId }}" rel="syndication" class="u-syndication  note--syndication">
-          {% set name = 'twitter' %}
-          {% include 'partials/_svg.njk' %}
-        </a>
-      {% endif %}
-      <div class="meta  note--meta">
-        <time class="dt-published" datetime="{{ post.date | htmlDateString }}">
-          <a class="u-url" href="{{ post.url }}">{{ post.date | readableDate }}</a>
-        </time>
-      </div>
-
-      <div class="note--tags">
-        {% for tag in post.data.tags %}
-          {%- if tag != "notes" -%}
-          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-          <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
-          {%- endif -%}
-        {% endfor %}
-      </div>
+      {% include 'partials/noteheader.njk' %}
 
       <div class="e-content p-name  note--content">
         {{ post.data.description }}
