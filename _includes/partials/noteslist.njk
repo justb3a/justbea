@@ -1,7 +1,7 @@
 <section class="indieweb">
   <h2>What's new?</h2>
 
-  {% for post in noteslist %}
+  {% for post in noteslist | reverse %}
     <article class="note h-entry">
       {% if post.data.twitterId %}
         <a href="https://twitter.com/@justb3a/status/{{ post.data.twitterId }}" rel="syndication" class="u-syndication  note--syndication">
