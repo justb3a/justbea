@@ -2,11 +2,14 @@
 layout: globals/base.njk
 templateClass: iw_note
 ---
+{% import "macros/pagination.njk" as macro with context %}
 <div class="grid  grid--4">
   <div class="grid__column">
     {% include "partials/profile.njk" %}
   </div>
   <div class="grid__column  grid__column--span--3">
+    {{ macro.pagination('notes') }}
+
     <article class="note h-entry">
       <h1 class="hidden">{{ title }}</h1>
 
@@ -24,7 +27,6 @@ templateClass: iw_note
       {% include 'partials/webmentionlist.njk' %}
     </article>
 
-    {% import "macros/pagination.njk" as macro with context %}
     {{ macro.pagination('notes') }}
   </div>
 </div>

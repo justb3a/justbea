@@ -44,4 +44,4 @@ This is a similar approach keeping the select element focusable (via keyboard / 
 }
 ```
 
-![Styling Choose](/img/posts/20161122_choose.jpg)
+![Styling Choose](/assets/img/posts/20161122_choose.jpg)
