@@ -4,7 +4,6 @@ Personal web page build with eleventy.
 
 - test and adapt (markup) webmentions
 - notes pagination (n per page)
-- nav items -> add active state
 - favicon
 - structure notes using permalinks
 

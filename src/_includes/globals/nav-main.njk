@@ -1,8 +1,7 @@
 <nav class="nav-{{ parameters.area }}" role="navigation" aria-label="Site Navigation">
   <ul class="nav-{{ parameters.area }}__list">
     {%- for nav in collections.nav -%}
-      <li>
-        {#% if nav.url == page.url %} nav-item-active{% endif %#}
+      <li class="{% if page.url | inNav(nav.url) %}nav-{{ parameters.area }}--active{% endif %}">
         <a class="u-url" href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
       </li>
     {%- endfor -%}
