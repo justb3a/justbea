@@ -20,6 +20,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
   const staticFiles = [
+    '_redirects',
     'favicon.ico',
     'favicon.png',
     'robots.txt',

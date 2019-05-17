@@ -5,6 +5,8 @@ Personal web page build with eleventy.
 - test and adapt (markup) webmentions
 - notes pagination (n per page)
 - structure notes using permalinks
+- serviceworkers / offline support
+- redirects
 
 ## Post blue print
 
