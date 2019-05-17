@@ -16,7 +16,21 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
+
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  const staticFiles = [
+    'favicon.ico',
+    'favicon.png',
+    'robots.txt',
+    'serviceworker.js',
+    'browserconfig.js',
+    'apple-touch-icon.png',
+  ];
+
+  staticFiles.forEach(file => {
+    eleventyConfig.addPassthroughCopy(file);
+  });
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
