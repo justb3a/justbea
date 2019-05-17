@@ -8,7 +8,7 @@ templateClass: iw_note
     {% include "partials/profile.njk" %}
   </div>
   <div class="grid__column  grid__column--span--3">
-    {{ macro.pagination('notes') }}
+    {{ macro.pagination('notes', 'above') }}
 
     <article class="note h-entry">
       <h1 class="hidden">{{ title }}</h1>
@@ -27,6 +27,6 @@ templateClass: iw_note
       {% include 'partials/webmentionlist.njk' %}
     </article>
 
-    {{ macro.pagination('notes') }}
+    {{ macro.pagination('notes', 'below') }}
   </div>
 </div>

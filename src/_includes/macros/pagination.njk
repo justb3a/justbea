@@ -1,4 +1,4 @@
-{% macro pagination(collection) %}
+{% macro pagination(collection, modifiers) %}
   {% set items = collections[collection] | reverse %}
   {% set currentItemIndex = 0 %}
   {% set countOfItems = items.length %}
@@ -15,9 +15,9 @@
   {% set nextItem = items[nextItemIndex] %}
   {% set prevItem = items[prevItemIndex] %}
 
-  <nav class="nav-indieweb">
+  <nav class="nav-indieweb{% if modifiers %}  nav-indieweb--{{ modifiers }}{% endif %}">
     {% if prevItem %}
-      <a href="{{ prevItem.url | url }}" aria-label="{{ prevItem.data.title }}">
+      <a class="nav-indieweb--prev" href="{{ prevItem.url | url }}" aria-label="{{ prevItem.data.title }}">
         {% set name = 'prev' %}
         {% include 'partials/_svg.njk' %}
         NEWER
@@ -25,7 +25,7 @@
     {% endif %}
 
     {% if nextItem %}
-      <a href="{{ nextItem.url | url }}" aria-label="{{ nextItem.data.title }}">
+      <a class="nav-indieweb--next" href="{{ nextItem.url | url }}" aria-label="{{ nextItem.data.title }}">
         OLDER
         {% set name = 'next' %}
         {% include 'partials/_svg.njk' %}
