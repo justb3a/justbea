@@ -1,5 +1,5 @@
 {% if post.data.twitterId %}
-  <a href="https://twitter.com/@justb3a/status/{{ post.data.twitterId }}" rel="syndication" class="u-syndication  note--syndication">
+  <a href="https://twitter.com/@{{ metadata.author.twitterName }}/status/{{ post.data.twitterId }}" rel="syndication" class="u-syndication  note--syndication">
     {% set name = 'twitter' %}
     {% include 'partials/_svg.njk' %}
   </a>

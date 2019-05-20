@@ -1,26 +1,26 @@
 <div class="indieweb--me js-indieweb--me">
-  <img src="{{ '/assets/img/me.jpg' | url }}" alt="Bea David">
+  <img src="{{ '/assets/img/me.jpg' | url }}" alt="{{ metadata.author.name }}">
 
   <ul class="list--links">
     <li class="h-item">
-      <a href="https://github.com/justb3a" rel="me" class="u-url  p-name">
+      <a href="{{ metadata.links.github }}" rel="me" class="u-url  p-name">
         {% set name = 'github' %}
         {% include 'partials/_svg.njk' %}
         Github
       </a>
     </li>
     <li class="h-item">
-      <a href="https://twitter.com/justb3a" rel="me" class="u-url  p-name">
+      <a href="{{ metadata.links.twitter }}" rel="me" class="u-url  p-name">
         {% set name = 'twitter' %}
         {% include 'partials/_svg.njk' %}
-        @justb3a
+        @{{ metadata.author.twitterName }}
       </a>
     </li>
     <li class="h-item">
-      <a class="u-email" href="mailto:info@justb3a.com">
+      <a class="u-email" href="mailto:{{ metadata.author.email }}">
         {% set name = 'mail' %}
         {% include 'partials/_svg.njk' %}
-        info@justb3a.com
+        {{ metadata.author.email }}
       </a>
     </li>
   </ul>

@@ -6,7 +6,9 @@
   "description": "Web development, CMS- and frontend integration.",
   "author": {
     "name": "Bea David",
-    "email": "info@justb3a.com"
+    "email": "info@justbea.dev",
+    "twitterName": "justb3a",
+    "location": "Leipzig, Germany"
   },
   "links": {
     "authEndpoint": "https://indieauth.com/auth",

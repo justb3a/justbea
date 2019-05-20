@@ -1,27 +1,27 @@
 <section class="section--profile  h-card  card">
-  <strong class="p-name  card--name">Bea David</strong>
+  <strong class="p-name  card--name">{{ metadata.author.name }}</strong>
   <h2>Contact</h2>
-  <img class="hidden u-photo" aria-hidden="true" src="{{ '/assets/img/me.jpg' | url}}" alt="Bea David" />
+  <img class="hidden u-photo" aria-hidden="true" src="{{ '/assets/img/me.jpg' | url}}" alt="{{ metadata.author.name }}" />
   <ul class="list--links">
     <li>
-      <a class="u-url" href="https://justb3a.com/" title="justb3a.com">
+      <a class="u-url" href="{{ metadata.url }}">
         {% set name = 'earth' %}
         {% include 'partials/_svg.njk' %}
-        https://justb3a.com
+        {{ metadata.url }}
       </a><br />
     </li>
     <li>
-      <a class="u-email" href="mailto:info@justb3a.com" title="get in touch">
+      <a class="u-email" href="mailto:{{ metadata.author.email }}">
         {% set name = 'mail' %}
         {% include 'partials/_svg.njk' %}
-        info@justb3a.com
+        {{ metadata.author.email }}
       </a>
     </li>
     <li>
       <span class="p-locality">
         {% set name = 'location' %}
         {% include 'partials/_svg.njk' %}
-        Leipzig, Germany
+        {{ metadata.author.location }}
       </span>
     </li>
   </ul>
@@ -31,17 +31,17 @@
   <h2 class="p-name">Profiles</h2>
   <ul class="list--links">
     <li class="h-item">
-      <a href="https://github.com/justb3a" rel="me" class="u-url  p-name" title="Github">
+      <a href="{{ metadata.links.github }}" rel="me" class="u-url  p-name">
         {% set name = 'github' %}
         {% include 'partials/_svg.njk' %}
         Github
       </a>
     </li>
     <li class="h-item">
-      <a href="https://twitter.com/justb3a" rel="me" class="u-url  p-name" title="Twitter">
+      <a href="{{ metadata.links.twitter }}" rel="me" class="u-url  p-name">
         {% set name = 'twitter' %}
         {% include 'partials/_svg.njk' %}
-        @justb3a
+        @{{ metadata.author.twitterName }}
       </a>
     </li>
   </ul>
