@@ -13,13 +13,13 @@ tags:
 
 ## All Constraints are Beautiful - Charlie Owen
 
-[sonniesedge.net](https://sonniesedge.net/) / [@sonniesedge](https://twitter.com/sonniesedge)
-[Video on Vimeo](https://vimeo.com/335856612)
+&there4; [sonniesedge.net](https://sonniesedge.net/) / [@sonniesedge](https://twitter.com/sonniesedge)
+&or; [Video on Vimeo](https://vimeo.com/335856612)
 
 ## Humanising Your Documentation - Carolyn Stransky
 
-[carolyn.codes](https://carolyn.codes/) / [@carolstran](https://twitter.com/carolstran)
-[Video on Vimeo](https://vimeo.com/335856815)
+&there4; [carolyn.codes](https://carolyn.codes/) / [@carolstran](https://twitter.com/carolstran)
+&or; [Video on Vimeo](https://vimeo.com/335856815)
 
 - [ALEX js – Catch insensitive, inconsiderate writing](https://alexjs.com)
 - [write good](https://github.com/btford/write-good)
@@ -32,35 +32,35 @@ tags:
 
 ## The Power of Metaphor - Mike Hill
 
-[mikehill.design](https://mikehill.design/)
-[Video on Vimeo](https://vimeo.com/335857004)
+&there4; [mikehill.design](https://mikehill.design/)
+&or; [Video on Vimeo](https://vimeo.com/335857004)
 
 ## Making Art With Familiar Objects - Red Hong Yi
 
-[redhongyi](https://redhongyi.com/)
-[Video on Vimeo](https://vimeo.com/335918196)
+&there4; [redhongyi](https://redhongyi.com/)
+&or; [Video on Vimeo](https://vimeo.com/335918196)
 
 ## Never Snap to Guides - David Carson
 
-[davidcarsondesign.com](https://davidcarsondesign.com/) / [@d_carson_design](https://twitter.com/d_carson_design)
+&there4; [davidcarsondesign.com](https://davidcarsondesign.com/) / [@d_carson_design](https://twitter.com/d_carson_design)
 
 ## Hard Work, Relentless Dreams and WiFi - Rob Draper
 
-[robdraper.co.uk](https://robdraper.co.uk/)
+&there4; [robdraper.co.uk](https://robdraper.co.uk/)
 
 ## Imagination, Desire and the Call of the Future - David Delgado
 
-[davidjdelgado.com](https://davidjdelgado.com/)
-[Video on Vimeo](https://vimeo.com/336041645)
+&there4; [davidjdelgado.com](https://davidjdelgado.com/)
+&or; [Video on Vimeo](https://vimeo.com/336041645)
 
 ## I Don't Care What Airbnb is Doing - Stephen Hay
 
-[the-haystack.com](https://the-haystack.com/) / [@stephenhay](https://twitter.com/stephenhay)
-[Video on Vimeo](https://vimeo.com/336085876)
+&there4; [the-haystack.com](https://the-haystack.com/) / [@stephenhay](https://twitter.com/stephenhay)
+&or; [Video on Vimeo](https://vimeo.com/336085876)
 
 ## Data, Design, Code - Shirley Wu
 
-[sxywu.com](https://sxywu.com/) / [@sxywu](https://twitter.com/sxywu)
+&there4; [sxywu.com](https://sxywu.com/) / [@sxywu](https://twitter.com/sxywu)
 
 - [VUE.JS - Progressive JavaScript Framework](https://vuejs.org)
 - [D3.js – manipulating documents based on data](https://d3js.org)
@@ -68,9 +68,9 @@ tags:
 
 ## The Scoville Scale of Web Font Loading Opinions - Zach Leatherman
 
-[zachleat.com](https://zachleat.com/) / [@zachleat](https://twitter.com/zachleat)
-[Video on Vimeo](https://vimeo.com/336091879)
-[Slides](https://noti.st/zachleat/Abp5Y7)
+&there4; [zachleat.com](https://zachleat.com/) / [@zachleat](https://twitter.com/zachleat)
+&or; [Video on Vimeo](https://vimeo.com/336091879)
+&isin; [Slides](https://noti.st/zachleat/Abp5Y7)
 
 - [Eleventy is a simpler static site generator](https://www.11ty.io/)
 - [CSS Fonts Module Level 3](https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/)
@@ -87,16 +87,16 @@ tags:
 
 ## Napworking - Dorobot
 
-[dorobot.de](https://dorobot.de/) / [@dorobot](https://twitter.com/dorobot)
-[Video on Vimeo](https://vimeo.com/336148540)
+&there4; [dorobot.de](https://dorobot.de/) / [@dorobot](https://twitter.com/dorobot)
+&or; [Video on Vimeo](https://vimeo.com/336148540)
 
 - [Zettelkasten](https://zettelkasten.de/)
 
 ## Flexbox Holy Albatross - Heydon Pickering
 
-[heydonworks.com](https://heydonworks.com/) / [@heydonworks](https://twitter.com/heydonworks)
+&there4; [heydonworks.com](https://heydonworks.com/) / [@heydonworks](https://twitter.com/heydonworks)
 
 ## Take Back Your Web - Tantek Çelik
 
-[tantek.com](https://tantek.com/) / [@t](https://twitter.com/t)
-[Video on Vimeo](https://vimeo.com/336343886)
+&there4; [tantek.com](https://tantek.com/) / [@t](https://twitter.com/t)
+&or; [Video on Vimeo](https://vimeo.com/336343886)
