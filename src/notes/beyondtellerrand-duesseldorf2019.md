@@ -21,14 +21,14 @@ tags:
 [carolyn.codes](https://carolyn.codes/) / [@carolstran](https://twitter.com/carolstran)
 [Video on Vimeo](https://vimeo.com/335856815)
 
-- https://alexjs.com
-- https://github.com/btford/write-good
-- https://hemingwayapp.com
-- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-- https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412
-- https://www.deque.com/axe/
-- https://wave.webaim.org
-- https://accessibilityinsights.io
+- [ALEX js – Catch insensitive, inconsiderate writing](https://alexjs.com)
+- [write good](https://github.com/btford/write-good)
+- [Hemingway App makes your writing bold and clear](https://hemingwayapp.com)
+- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Writing HTML with accessibility in mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412)
+- [axe: Accessibility for Development Teams](https://www.deque.com/axe/)
+- [WAVE – web accessibility evaluation tool](https://wave.webaim.org)
+- [Accessibility Insights](https://accessibilityinsights.io)
 
 ## The Power of Metaphor - Mike Hill
 
@@ -62,8 +62,9 @@ tags:
 
 [sxywu.com](https://sxywu.com/) / [@sxywu](https://twitter.com/sxywu)
 
-- https://greensock.com
-- https://d3js.org
+- [VUE.JS - Progressive JavaScript Framework](https://vuejs.org)
+- [D3.js – manipulating documents based on data](https://d3js.org)
+- [Greensock – animation for the modern web](https://greensock.com)
 
 ## The Scoville Scale of Web Font Loading Opinions - Zach Leatherman
 
@@ -71,15 +72,25 @@ tags:
 [Video on Vimeo](https://vimeo.com/336091879)
 [Slides](https://noti.st/zachleat/Abp5Y7)
 
-- https://djr.com/
-- https://meowni.ca
+- [Eleventy is a simpler static site generator](https://www.11ty.io/)
+- [CSS Fonts Module Level 3](https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/)
+- [Font Family Reunion – Compatibility tables for default local fonts](http://fontfamily.io/)
+- [David Jonathan Ross](https://djr.com/)
+- [Font style matcher](https://meowni.ca/font-style-matcher/)
+- [Delivering Octicons with SVG](https://github.blog/2016-02-22-delivering-octicons-with-svg/)
+- [Don’t Use Icon Fonts](https://cloudfour.com/thinks/seriously-dont-use-icon-fonts/)
+- [Death to Icon Fonts](https://speakerdeck.com/ninjanails/death-to-icon-fonts)
+- [Converting Font Icons to SVG](https://www.sarasoueidan.com/blog/icon-fonts-to-svg/)
+- [Inline SVG vs Icon Fonts](https://css-tricks.com/icon-fonts-vs-svg/)
+- [Font Display](https://font-display.glitch.me/)
+- [HTML5TEST](https://html5test.com/)
 
 ## Napworking - Dorobot
 
 [dorobot.de](https://dorobot.de/) / [@dorobot](https://twitter.com/dorobot)
 [Video on Vimeo](https://vimeo.com/336148540)
 
-- zettelkasten.de/
+- [Zettelkasten](https://zettelkasten.de/)
 
 ## Flexbox Holy Albatross - Heydon Pickering
 
