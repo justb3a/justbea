@@ -13,15 +13,13 @@ tags:
 
 ## All Constraints are Beautiful - Charlie Owen
 
-[sonniesedge.net](https://sonniesedge.net/)
-[@sonniesedge](https://twitter.com/sonniesedge)
-https://vimeo.com/335856612
+[sonniesedge.net](https://sonniesedge.net/) / [@sonniesedge](https://twitter.com/sonniesedge)
+[Video on Vimeo](https://vimeo.com/335856612)
 
 ## Humanising Your Documentation - Carolyn Stransky
 
-[carolyn.codes](https://carolyn.codes/)
-[@carolstran](https://twitter.com/carolstran)
-https://vimeo.com/335856815
+[carolyn.codes](https://carolyn.codes/) / [@carolstran](https://twitter.com/carolstran)
+[Video on Vimeo](https://vimeo.com/335856815)
 
 - https://alexjs.com
 - https://github.com/btford/write-good
@@ -30,68 +28,64 @@ https://vimeo.com/335856815
 - https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412
 - https://www.deque.com/axe/
 - https://wave.webaim.org
-- http://accessibilityinsights.io
+- https://accessibilityinsights.io
 
 ## The Power of Metaphor - Mike Hill
 
-http://mikehill.design/
-https://vimeo.com/335857004
+[mikehill.design](https://mikehill.design/)
+[Video on Vimeo](https://vimeo.com/335857004)
 
 ## Making Art With Familiar Objects - Red Hong Yi
 
-http://redhongyi.com/
-https://vimeo.com/335918196
+[redhongyi](https://redhongyi.com/)
+[Video on Vimeo](https://vimeo.com/335918196)
 
 ## Never Snap to Guides - David Carson
 
-http://davidcarsondesign.com/
-https://twitter.com/d_carson_design
+[davidcarsondesign.com](https://davidcarsondesign.com/) / [@d_carson_design](https://twitter.com/d_carson_design)
 
 ## Hard Work, Relentless Dreams and WiFi - Rob Draper
 
-https://robdraper.co.uk/
+[robdraper.co.uk](https://robdraper.co.uk/)
 
 ## Imagination, Desire and the Call of the Future - David Delgado
 
-http://davidjdelgado.com/
-https://vimeo.com/336041645
+[davidjdelgado.com](https://davidjdelgado.com/)
+[Video on Vimeo](https://vimeo.com/336041645)
 
 ## I Don't Care What Airbnb is Doing - Stephen Hay
 
-http://the-haystack.com/
-https://twitter.com/stephenhay
-https://vimeo.com/336085876
+[the-haystack.com](https://the-haystack.com/) / [@stephenhay](https://twitter.com/stephenhay)
+[Video on Vimeo](https://vimeo.com/336085876)
 
 ## Data, Design, Code - Shirley Wu
 
-http://sxywu.com/
-https://twitter.com/sxywu
+[sxywu.com](https://sxywu.com/) / [@sxywu](https://twitter.com/sxywu)
 
 - https://greensock.com
 - https://d3js.org
 
 ## The Scoville Scale of Web Font Loading Opinions - Zach Leatherman
 
-https://zachleat.com/
-https://twitter.com/zachleat
-https://vimeo.com/336091879
+[zachleat.com](https://zachleat.com/) / [@zachleat](https://twitter.com/zachleat)
+[Video on Vimeo](https://vimeo.com/336091879)
 [Slides](https://noti.st/zachleat/Abp5Y7)
+
+- https://djr.com/
+- https://meowni.ca
 
 ## Napworking - Dorobot
 
-https://dorobot.de/
-https://twitter.com/dorobot
-https://vimeo.com/336148540
+[dorobot.de](https://dorobot.de/) / [@dorobot](https://twitter.com/dorobot)
+[Video on Vimeo](https://vimeo.com/336148540)
 
 - zettelkasten.de/
 
 ## Flexbox Holy Albatross - Heydon Pickering
 
-http://heydonworks.com/
-https://twitter.com/heydonworks
+[heydonworks.com](https://heydonworks.com/) / [@heydonworks](https://twitter.com/heydonworks)
 
 ## Take Back Your Web - Tantek Çelik
 
-http://tantek.com/
-https://twitter.com/t
-https://vimeo.com/336343886
+[tantek.com](https://tantek.com/) / [@t](https://twitter.com/t)
+[Video on Vimeo](https://vimeo.com/336343886)
