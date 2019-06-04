@@ -25,11 +25,11 @@ There are several ways with different advantages and disadvantages:
 /System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py -o path/to/merged-file.pdf /path/to/source1.pdf /path/to/source2.pdf /path/to/dir/*.pdf
 ```
 
-**Usage:**
+**> Usage:**
 
 `join [--output <file>] [--shuffle] [--verbose]`
 
-**Parameter:**
+**> Parameter:**
 
 `--output` | `-o`
 Set a certain file as the destination.
@@ -41,9 +41,9 @@ If this option is not specified then all of the pages from a PDF file are append
 `--verbose` | `-v`
 Write information about the doings of this tool to stderr.
 
-**Easier use by using a shorter command:**
+**> Easier use by using a shorter command:**
 
-*Option 1*
+*&there4; Option 1*
 
 Set up an alias.
 
@@ -65,7 +65,7 @@ Use it from everywhere:
 joinPDF path/to/merged-file.pdf /path/to/source1.pdf /path/to/source2.pdf /path/to/dir/*.pdf
 ```
 
-*Option 2*
+*&there4; Option 2*
 
 Put the link in `/usr/local/bin` (as it is in the $PATH)
 
@@ -82,7 +82,7 @@ joinPDF -o path/to/merged-file.pdf /path/to/source1.pdf /path/to/source2.pdf /pa
 
 `@see:` [Joining PDF files in OS X from the command line](https://gotofritz.net/blog/howto/joining-pdf-files-in-os-x-from-the-command-line/)
 
-*Option 3*
+*&there4; Option 3*
 
 Set up an symbolic link like `ln -s /System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py joinPDF.py`.
 
