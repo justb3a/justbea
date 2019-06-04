@@ -13,9 +13,9 @@ twitterId:
 
 There are several ways with different advantages and disadvantages:
 
-1. (using pre-installed macOS python script)[./#using-pre-installed-macOS-python-script]
-2. (using Ghostscript)[./#using-ghostscript]
-3. (manually using Preview.app)[./#manually-using-Preview.app]
+1. [using pre-installed macOS python script](./#using-pre-installed-macos-python-script)
+2. [using Ghostscript](./#using-ghostscript)
+3. [manually using Preview.app](./#manually-using-preview.app)
 
 ### using pre-installed macOS python script
 
