@@ -6,7 +6,11 @@
       {% include 'partials/noteheader.njk' %}
 
       <div class="e-content p-name  note--content">
-        {{ post.data.description }}
+        {% if post.data.description %}
+          {{ post.data.description }}
+        {% else %}
+          {{ post.data.title }}
+        {% endif %}
         <a href="{{ post.url | url }}" class="postlist-link">[read on]</a>
       </div>
     </article>
