@@ -16,8 +16,12 @@ Learnings from [*Design Meets Code LAB: #Responsive Typography*](https://design-
 ```
 font-size:
   calc(
-    [minimum font size] + ([maximum font size] - [minimum font size])
-    * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))
+    [minimum font size]
+    + ([maximum font size] - [minimum font size])
+    * (
+      (100vw - [minimum viewport width])
+      / ([maximum viewport width] - [minimum viewport width])
+    )
   );
 ```
 
@@ -29,14 +33,10 @@ font-size:
 - maximum font size: 24px
 
 ```
-font-size:
-  calc(
-    14px + (24 - 14)
-    * ((100vw - 320px) / (1600 - 320))
-  );
+font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1600 - 320)));
 ```
 
-It's really important to skipp the units in the first and last bracket.
+It's really important to skip the units in the first and last bracket.
 Also make sure that the spaces are preserved.
 
 ### SASS Mixin
@@ -44,11 +44,16 @@ Also make sure that the spaces are preserved.
 There are also several SASS Mixins:
 
 - [Mike Riethmuller: Codepen](https://codepen.io/MadeByMike/pen/vNrvdZ)
-- [Indrek Paas : Sass Gist](https://www.sassmeister.com/gist/7f22e44ace49b5124eec)
+- [Indrek Paas: Sass Gist](https://www.sassmeister.com/gist/7f22e44ace49b5124eec)
 - [Matej Latin: Codepen](https://codepen.io/matejlatin/pen/dEXQmG)
 
 ```
-// @include fluid-type([minimum viewport width], [maximum viewport width], [minimum font size], [maximum font size]);
+// @include fluid-type(
+  [minimum viewport width],
+  [maximum viewport width],
+  [minimum font size],
+  [maximum font size]
+);
 
 body {
   @include fluid-type(320px, 1600px, 14px, 24px);
