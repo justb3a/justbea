@@ -61,6 +61,7 @@ tags:
 ## Data, Design, Code - Shirley Wu
 
 &there4; [sxywu.com](https://sxywu.com/) / [@sxywu](https://twitter.com/sxywu)
+&or; [Video on Vimeo](https://vimeo.com/336086017)
 
 - [VUE.JS - Progressive JavaScript Framework](https://vuejs.org)
 - [D3.js – manipulating documents based on data](https://d3js.org)
