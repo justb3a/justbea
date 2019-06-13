@@ -39,11 +39,11 @@ gg0<C-V>2j$A',<Esc>
 
 - go to the beginning of the first line: `gg0`
 - enter visual block mode: `<C-V>` (ctrl + V)
-    - check for *-- VISUAL BLOCK --*
+- check for *-- VISUAL BLOCK --*
 - move downwards 2 lines to select all lines: `2j`
 - go to the end of the last line: `$`
 - now enter `A` to append text
-    - the cursor appears at the end of the first line
+- the cursor appears at the end of the first line
 - type in the desired characters **',**
 - press the `<Esc>` key to confirm
 
@@ -57,7 +57,7 @@ Option A) Apply it to every line in the whole file:
 :%
 ```
 
-Option B) Apply it only to a subset of lines, select the desired lines by pressing `v` and moving up/below `k`/`j`:
+Option B) Apply it only to a subset of lines, select the desired lines by pressing `v` and moving up/down `k`/`j`:
 
 ```
 :'<,'>
@@ -85,8 +85,7 @@ $a',<Esc>jq
 ```
 
 - go to the first line: `gg`
-- type `qq` to start to record at `q`
-    - check for *recording @q*
+- type `qq` to start recording at `q` (check for *recording @q*)
 - go to the end of the current line: `$`
 - press `a` to enter text afterwards
 - type in the desired characters **',**, leave insert mode by hitting `<Esc>`
