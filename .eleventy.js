@@ -25,6 +25,7 @@ module.exports = function(eleventyConfig) {
     'favicon.png',
     'robots.txt',
     'serviceworker.js',
+    'manifest.json',
     'browserconfig.xml',
     'apple-touch-icon.png',
   ];
