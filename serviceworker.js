@@ -1,13 +1,12 @@
 (() => {
   // Update 'version' if you need to refresh the cache
   const cacheVersion = 'v1.0.3';
-  const hash = '1462636670';
   const baseUrl = 'https://justbea.dev';
   const alwaysCache = [
     '/',
     '/offline/',
-    `/assets/js/main.min.${hash}.js`,
-    `/assets/css/main.min.${hash}.css`,
+    `/assets/js/main.min.js`,
+    `/assets/css/main.min.css`,
     '/assets/img/sprites.svg'
   ];
 

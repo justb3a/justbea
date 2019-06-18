@@ -22,7 +22,7 @@
     <link href="{{ metadata.links.github }}" rel="me" />
     <link href="mailto:{{ metadata.author.email }}" rel="me" />
 
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.min.css' | url }}">
   </head>
 
   <body class="page--{{ templateClass }}">
@@ -63,7 +63,7 @@
       {% include 'globals/nav-main.njk' %}
     </footer>
 
-    <script src="{{ '/assets/js/main.js' | url }}"></script>
+    <script src="{{ '/assets/js/main.min.js' | url }}"></script>
 
     <script>
       if ('serviceWorker' in navigator) {
