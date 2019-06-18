@@ -64,5 +64,11 @@
     </footer>
 
     <script src="{{ '/assets/js/main.js' | url }}"></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("{{ '/serviceworker.js' }}");
+      }
+    </script>
   </body>
 </html>
