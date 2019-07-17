@@ -25,11 +25,12 @@ Git wrapper plugin by Tim Pope: [tpope/vim-fugitive](https://github.com/tpope/vi
 |          | like `:Git rm %`                                              |
 | :Gmove   | rename file & vim buffer                                      |
 |          | like `:Git mv %`                                              |
-| :Gcommit | opens commit window                                           |
+| :Gcommit | opens commit window (interactive status: `C`)                 |
 | :Gblame  | opens window containing annotations for each line of the file |
 | :Gpush   | invoke `git push`                                             |
 | :Gpull   | invoke `git pull`                                             |
 | :Gstatus | invoke `git status`, *shortcut:* `:G`                         |
+| :Gdiff   | invoke `git diff` (interactive status: `D`)                  |
 
 ### :Git
 
@@ -50,14 +51,21 @@ Git wrapper plugin by Tim Pope: [tpope/vim-fugitive](https://github.com/tpope/vi
 - shortcut `:G`, like `git status`
 - interactive split window
 - navigate between listed files:
-  - next file`ctrl-n`
-  - prev file`ctrl-p`
-- `-` to add / remove a file from the index
-    - unstaged file: add to the index like `git add`
-    - staged file: remove from the index like `git reset`
+  - `ctrl-n` next file
+  - `ctrl-p` prev file
+  - `gu` jump to *unstaged* section
+  - `gs` jump to *staged* section
+  - `gU` jump to *untracked* section
+- stage / unstage file under cursor
+  - `-` *toggle*: to add / remove a file from the index
+  - `s` *stage* unstaged file: add to the index like `git add`
+  - `u` *unstage* staged file: remove from the index like `git reset`
 - works in visual mode as well (select multiple files and press `-`)
 - if you want to add all files use `:git add .`
-- press `<Enter>` to open current file
+- press `<Enter>` to open current file (review it before adding)
+    - press `o` to open current file in a new horizontal split
+    - press `gO` to open current file in a new vertical split
+    - press `O` to open current file in a tab
 
 ### :Gwrite
 
@@ -68,12 +76,25 @@ Git wrapper plugin by Tim Pope: [tpope/vim-fugitive](https://github.com/tpope/vi
 
 `git add --patch`
 
-- *shortcut*: `g add -p`
+- press `P` (*shortcut* in terminal: `g add -p`)
 - does not add all the changes immediately
 - goes through each change and asks whether you want to add it or not
-- displays a diff (called hunk)
+- splits changes into *hunks*: displays a diff for each change (called *hunk*)
+- *Stage this hunk [y,n,q,a,d,j,J,g,/,s,e,?]?*
+    - `y` **y**es stage this hunk
+    - `n` **n**o do not stage this hunk
+    - `q` **q**uit, do not stage this hunk or any of the remaining ones
+    - `a` stage this hunk and **a**ll later hunks in the file
+    - `d` do not stage this hunk or any of the later hunks in the file
+    - `j` leave this hunk undecided, see next undecided hunk
+    - `J` leave this hunk undecided, see next hunk
+    - `g` **g**o to: select hunk to go to
+    - `/` search for hunk matching the given regex
+    - `s` **s**plit the current hunk into smaller hunks
+    - `e` **e**dit the current hunk manually
+    - `?` print help
 
-## vimconfig
+## vimconfig example
 
 ```
 nnoremap <silent> <leader>gs :Gstatus<CR><C-w>20+
@@ -83,7 +104,7 @@ nnoremap <silent> <leader>gw :Gwrite<CR><C-w>20+
 nnoremap <silent> <leader>gp :Gpush<CR><C-w>20+
 ```
 
-### commit
+## manage index, commit and push
 
 - `,gs` / `:G` to show git status
 - `-` to add/remove file to the index
