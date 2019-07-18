@@ -12,7 +12,6 @@ location: Leipzig
 ---
 ## Add git support for vim using fugitive
 
-
 ### Basics: add and checkout
 
 - **index**: last committed version of the <file>
@@ -29,7 +28,7 @@ location: Leipzig
 - run `:Gwrite` (similar to  `:Git add %` and `git add <file>`) on the working copy to apply changes to the index
 - run `:Gread` (similar to  `:Git checkout %` and `git checkout <file>`) on the working copy to reset changes to the index
 
-![Git Add and Checkout](/assets/img/posts/201907_git-add.jpg)
+![Git Add and Checkout](/assets/img/posts/20190718_git-add.jpg)
 
 ### Using add --patch
 
@@ -69,3 +68,8 @@ location: Leipzig
   - only some of the changes have been staged
 4. run `:git diff --cached %` (similar to `git diff --cached <file>`) to list only staged changes for the file
 
+![Git Add Patch stage changes](/assets/img/posts/20190718_git-patch-stage.jpg)
+
+#### Reset specific changes
+
+![Git Add Patch unstage changes](/assets/img/posts/20190718_git-patch-unstage.jpg)
