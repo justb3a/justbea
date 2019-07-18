@@ -72,28 +72,6 @@ Git wrapper plugin by Tim Pope: [tpope/vim-fugitive](https://github.com/tpope/vi
 - stage file to the index like `:Git add %` or `git add <file>`
 - adds all changes in that file to the index by default
 
-#### add patches from a changed file
-
-`git add --patch`
-
-- press `P` (*shortcut* in terminal: `g add -p`)
-- does not add all the changes immediately
-- goes through each change and asks whether you want to add it or not
-- splits changes into *hunks*: displays a diff for each change (called *hunk*)
-- *Stage this hunk [y,n,q,a,d,j,J,g,/,s,e,?]?*
-    - `y` **y**es stage this hunk
-    - `n` **n**o do not stage this hunk
-    - `q` **q**uit, do not stage this hunk or any of the remaining ones
-    - `a` stage this hunk and **a**ll later hunks in the file
-    - `d` do not stage this hunk or any of the later hunks in the file
-    - `j` leave this hunk undecided, see next undecided hunk
-    - `J` leave this hunk undecided, see next hunk
-    - `g` **g**o to: select hunk to go to
-    - `/` search for hunk matching the given regex
-    - `s` **s**plit the current hunk into smaller hunks
-    - `e` **e**dit the current hunk manually
-    - `?` print help
-
 ## vimconfig example
 
 ```
