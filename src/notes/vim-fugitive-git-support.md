@@ -87,7 +87,7 @@ nnoremap <silent> <leader>gp :Gpush<CR><C-w>20+
 - `,gs` / `:G` to show git status
 - `-` to add/remove file to the index
 - `D` to get the diff for the selected file
-- `C` to enter commit message (`i` insert mode, write message, leave `:wq`)
+- `cc` to enter commit message (`i` insert mode, write message, leave `:wq`)
 - `,gp` / `:Gpush` push to current branch
 
 ## Further reading
