@@ -10,7 +10,7 @@ tags:
   - patch
 location: Leipzig
 ---
-## Add git support for vim using fugitive
+## Add git support for vim using fugitive [1]
 
 ### Basics: add and checkout
 
@@ -54,22 +54,3 @@ location: Leipzig
 ### Using diff to execute add --patch
 
 - stage only some of the changes and keep others in the working copy (but not in the index)
-
-#### Add specific changes
-
-1. add hunk from working copy to index
-  - *option 1* select working copy: add hunk by running `:diffput` (shortcut: `dp`)
-  - *option 2* select index: add hunk by running `:diffget` (shortcut: `do`)
-  - divide hunks by using visual selection `:'<,'>diffput`
-2. write updated index file (`:w`)
-3. check status split
-  - status split should be realoaded automatically, if not type `:e`
-  - if you have not added all changes, the file should appear twice
-  - only some of the changes have been staged
-4. run `:git diff --cached %` (similar to `git diff --cached <file>`) to list only staged changes for the file
-
-![Git Add Patch stage changes](/assets/img/posts/20190718_git-patch-stage.jpg)
-
-#### Reset specific changes
-
-![Git Add Patch unstage changes](/assets/img/posts/20190718_git-patch-unstage.jpg)
