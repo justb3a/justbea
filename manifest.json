@@ -1,6 +1,8 @@
 {
   "name": "Webdevelopment justbea.dev",
   "short_name": "justbea.dev",
+  "lang": "en_GB",
+  "description": "Web development, CMS- and frontend integration.",
   "icons": [
     {
       "src": "/favicon.png",
