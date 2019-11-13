@@ -85,6 +85,7 @@
     // Always fetch non-GET requests from the network
     if (request.method !== 'GET') {
       event.respondWith(fetchNetwork(request));
+      return;
     }
 
     // If we have a reqest, that matches in neverCache, always return from network
@@ -105,6 +106,7 @@
             });
           }),
       );
+      return;
     }
 
     // Static assets: Cache first, then network
@@ -122,6 +124,7 @@
             .catch(() => emptyResponse);
         }),
       );
+      return;
     }
 
     // If the request is for an image, show an offline placeholder
@@ -135,6 +138,7 @@
           return new Response(offlineSvg, svgHeader);
         }),
       );
+      return;
     }
   });
 })();
