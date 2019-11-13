@@ -12,6 +12,25 @@
   ];
   const neverCache = ['/serviceworker.js', '/micropub/'];
 
+  let isSlowConnection = false;
+  let shouldSaveData = false;
+  let connectionLastTested = null;
+  const connectionTestTimeout = 6000;
+  const noSlowImageFallback = ['/logo-48.png', '/logo-72.png', '/logo-96.png', '/logo-144.png', '/logo-192.png'];
+
+  // Test network connection every minute
+  const testConnection = () => {
+    if (connectionLastTested && Date.now() < connectionLastTested + connectionTestTimeout) {
+      return;
+    }
+
+    if ('connection' in navigator) {
+      isSlowConnection = navigator.connection.downlink < 0.5;
+      shouldSaveData = navigator.connection.saveData;
+      connectionLastTested = Date.now();
+    }
+  };
+
   const offlineSvg = `
     <svg width="400" height="300" role="img" aria-labelledby="offline-title"
       viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
@@ -24,12 +43,29 @@
       </g>
     </svg>`;
 
+  const slowConnectionSvg = `
+    <svg width="400" height="300" role="img" aria-labelledby="slow-connection-title"
+      viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      <title id="offline-title">Slow Connection</title>
+      <g fill="none" fill-rule="evenodd">
+        <path fill="#D8D8D8" d="M0 0h400v300H0z"/>
+        <text fill="#9B9B9B" font-family="Arial, sans-serif" font-size="40" font-weight="bold">
+          <tspan x="93" y="140">Slow</tspan>
+          <tspan x="93" y="180">connection</tspan>
+        </text>
+      </g>
+    </svg>`;
+
   const svgHeader = { headers: { 'Content-Type': 'image/svg+xml' } };
 
   const emptyResponse = new Response('', {
     status: 408,
     statusText: 'The server appears to be offline.',
   });
+
+  const newImageResponse = svg => {
+    return new Response(svg, svgHeader);
+  };
 
   // Store core files in a cache (including a page to display when offline)
   const updateStaticCache = () => {
@@ -56,7 +92,7 @@
   const cacheAndReturnResponse = (response, event) => {
     event.waitUntil(
       caches.open(cacheVersion).then(cache => {
-        return cache.put(request, response);
+        return cache.put(event.request, response);
       }),
     );
 
@@ -82,6 +118,8 @@
   self.addEventListener('fetch', event => {
     let request = event.request;
 
+    testConnection();
+
     // Always fetch non-GET requests from the network
     if (request.method !== 'GET') {
       event.respondWith(fetchNetwork(request));
@@ -91,6 +129,7 @@
     // If we have a reqest, that matches in neverCache, always return from network
     if (neverCache.some(item => new RegExp(`\\b${item}\\b`).test(request.url.replace(baseUrl, '')))) {
       event.respondWith(fetchNetwork(request));
+      return;
     }
 
     // For HTML requests, try the network first, fall back to the cache, finally the offline page
@@ -98,7 +137,7 @@
       event.respondWith(
         fetch(request)
           .then(response => {
-            cacheAndReturnResponse(response, event);
+            return cacheAndReturnResponse(response, event);
           })
           .catch(() => {
             return caches.match(request).then(cachedResponse => {
@@ -119,7 +158,7 @@
 
           return fetch(request)
             .then(response => {
-              cacheAndReturnResponse(response, event);
+              return cacheAndReturnResponse(response, event);
             })
             .catch(() => emptyResponse);
         }),
@@ -128,17 +167,27 @@
     }
 
     // If the request is for an image, show an offline placeholder
-    if (request.headers.get('Accept').indexOf('image') !== -1) {
+    if (request.headers.get('Accept').includes('image')) {
       event.respondWith(
-        caches.match(request).then(response => {
-          if (response) {
-            return response;
+        caches.match(request).then(cachedResponse => {
+          if (cachedResponse) {
+            return cachedResponse;
           }
 
-          return new Response(offlineSvg, svgHeader);
+          // If we have a reqest, that matches in noSlowImageFallback, always return from network
+          if (isSlowConnection || shouldSaveData) {
+            return newImageResponse(slowConnectionSvg);
+          }
+
+          return fetch(request)
+            .then(response => {
+              return cacheAndReturnResponse(response, event);
+            })
+            .catch(() => {
+              return newImageResponse(offlineSvg);
+            });
         }),
       );
-      return;
     }
   });
 })();
