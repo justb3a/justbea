@@ -13,5 +13,6 @@
   "theme_color": "#3cf",
   "background_color": "#333",
   "display": "minimal-ui",
-  "start_url": "/"
+  "start_url": "/",
+  "orientation": "natural"
 }
