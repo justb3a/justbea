@@ -10,7 +10,7 @@
     `/assets/css/main.min.css`,
     '/assets/img/sprites.svg',
   ];
-  const neverCache = ['/serviceworker.js', '/micropub/'];
+  const neverCache = ['/serviceworker.js', '/micropub/', 'journaling'];
 
   let isSlowConnection = false;
   let shouldSaveData = false;

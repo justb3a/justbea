@@ -3,15 +3,16 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const filters = require('./src/_filters/_index');
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addLayoutAlias('note', 'layouts/note.njk');
+  eleventyConfig.addShortcode('jq', () => `${['bla', 'foo', 'bar'][Math.floor(Math.random() * 3)]}`);
 
   // add custom filter
-  Object.keys(filters).forEach(key => {
+  Object.keys(filters).forEach((key) => {
     eleventyConfig.addFilter(key, filters[key]);
   });
 
@@ -35,7 +36,7 @@ module.exports = function(eleventyConfig) {
     'apple-touch-icon.png',
   ];
 
-  staticFiles.forEach(file => {
+  staticFiles.forEach((file) => {
     eleventyConfig.addPassthroughCopy(file);
   });
 
@@ -57,7 +58,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
-      ready: function(err, browserSync) {
+      ready: function (err, browserSync) {
         const content_404 = fs.readFileSync('_site/404.html');
 
         browserSync.addMiddleware('*', (req, res) => {
