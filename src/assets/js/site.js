@@ -92,7 +92,7 @@ const questions = [
   'Wie beeinflussen die Jahreszeiten deine Stimmung?',
   'Mach dir einen Plan für den perfekten Garten für dich!',
   'Wie sähe ein perfektes Weihnachtsfest für dich aus?',
-  'was macht für dich einen verregneten Tag schön?',
+  'Was macht für dich einen verregneten Tag schön?',
   'Welche Herausforderung würdest du gerne überwinden?',
   'Welche Angst würdest du gerne überwinden?',
   'Was waren deine schönsten Sommerferien, die du je hattest?',
