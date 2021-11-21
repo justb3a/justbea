@@ -1,2 +1,2 @@
-/journaling/
+/journaling/*
   Basic-Auth: someuser:somepassword
