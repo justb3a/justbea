@@ -9,7 +9,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addLayoutAlias('note', 'layouts/note.njk');
-  eleventyConfig.addShortcode('jq', () => `${['bla', 'foo', 'bar'][Math.floor(Math.random() * 3)]}`);
 
   // add custom filter
   Object.keys(filters).forEach((key) => {
