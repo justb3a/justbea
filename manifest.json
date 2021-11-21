@@ -28,6 +28,12 @@
       "purpose": "any maskable"
     },
     {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
       "src": "logo-192.png",
       "sizes": "192x192",
       "type": "image/png",
@@ -38,21 +44,5 @@
   "background_color": "#ffffff",
   "display": "minimal-ui",
   "start_url": ".",
-  "orientation": "natural",
-  "shortcuts": [
-    {
-      "name": "JQOD",
-      "short_name": "JQOD",
-      "description": "Journaling Question",
-      "url": "/journaling/",
-      "icons": [
-        {
-          "src": "logo-192.png",
-          "sizes": "192x192",
-          "type": "image/png",
-          "purpose": "any maskable"
-        }
-      ]
-    }
-  ]
+  "orientation": "natural"
 }
