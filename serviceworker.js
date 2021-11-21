@@ -1,6 +1,6 @@
 (() => {
   // Update 'version' if you need to refresh the cache
-  const cacheVersion = 'v1.0.4';
+  const cacheVersion = 'v1.0.5';
   const baseUrl = 'https://justbea.dev';
   const offlinePage = '/offline/';
   const alwaysCache = [
@@ -63,26 +63,26 @@
     statusText: 'The server appears to be offline.',
   });
 
-  const newImageResponse = svg => {
+  const newImageResponse = (svg) => {
     return new Response(svg, svgHeader);
   };
 
   // Store core files in a cache (including a page to display when offline)
   const updateStaticCache = () => {
-    caches.open(cacheVersion).then(cache => {
+    caches.open(cacheVersion).then((cache) => {
       cache.addAll(alwaysCache);
     });
   };
 
   // Remove caches whose name is no longer valid
   const removeInvalidCache = () => {
-    caches.keys().then(keys => {
+    caches.keys().then((keys) => {
       return Promise.all(
         keys
-          .filter(key => {
+          .filter((key) => {
             return !key.startsWith(cacheVersion);
           })
-          .map(key => {
+          .map((key) => {
             return caches.delete(key);
           }),
       );
@@ -91,7 +91,7 @@
 
   const cacheAndReturnResponse = (response, event) => {
     event.waitUntil(
-      caches.open(cacheVersion).then(cache => {
+      caches.open(cacheVersion).then((cache) => {
         return cache.put(event.request, response);
       }),
     );
@@ -99,23 +99,23 @@
     return response.clone();
   };
 
-  const fetchNetwork = request => {
+  const fetchNetwork = (request) => {
     return fetch(request).catch(() => {
       return caches.match(offlinePage);
     });
   };
 
-  self.addEventListener('install', event => {
+  self.addEventListener('install', (event) => {
     event.waitUntil(updateStaticCache());
     self.skipWaiting();
   });
 
-  self.addEventListener('activate', event => {
+  self.addEventListener('activate', (event) => {
     event.waitUntil(removeInvalidCache());
     clients.claim();
   });
 
-  self.addEventListener('fetch', event => {
+  self.addEventListener('fetch', (event) => {
     let request = event.request;
 
     testConnection();
@@ -127,7 +127,7 @@
     }
 
     // If we have a reqest, that matches in neverCache, always return from network
-    if (neverCache.some(item => new RegExp(`\\b${item}\\b`).test(request.url.replace(baseUrl, '')))) {
+    if (neverCache.some((item) => new RegExp(`\\b${item}\\b`).test(request.url.replace(baseUrl, '')))) {
       event.respondWith(fetchNetwork(request));
       return;
     }
@@ -136,11 +136,11 @@
     if (event.request.mode === 'navigate') {
       event.respondWith(
         fetch(request)
-          .then(response => {
+          .then((response) => {
             return cacheAndReturnResponse(response, event);
           })
           .catch(() => {
-            return caches.match(request).then(cachedResponse => {
+            return caches.match(request).then((cachedResponse) => {
               return cachedResponse || caches.match(offlinePage);
             });
           }),
@@ -151,13 +151,13 @@
     // Static assets: Cache first, then network
     if (/\.css$/.test(request.url) || /\.js$/.test(request.url)) {
       event.respondWith(
-        caches.match(request).then(cachedResponse => {
+        caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
           }
 
           return fetch(request)
-            .then(response => {
+            .then((response) => {
               return cacheAndReturnResponse(response, event);
             })
             .catch(() => emptyResponse);
@@ -169,7 +169,7 @@
     // If the request is for an image, show an offline placeholder
     if (request.headers.get('Accept').includes('image')) {
       event.respondWith(
-        caches.match(request).then(cachedResponse => {
+        caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
           }
@@ -180,7 +180,7 @@
           }
 
           return fetch(request)
-            .then(response => {
+            .then((response) => {
               return cacheAndReturnResponse(response, event);
             })
             .catch(() => {

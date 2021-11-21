@@ -43,6 +43,6 @@
   "theme_color": "#3cf",
   "background_color": "#ffffff",
   "display": "minimal-ui",
-  "start_url": ".",
+  "start_url": "/journaling/",
   "orientation": "natural"
 }
