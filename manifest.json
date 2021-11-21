@@ -40,7 +40,7 @@
       "purpose": "any maskable"
     }
   ],
-  "theme_color": "#3cf",
+  "theme_color": "#33ccff",
   "background_color": "#ffffff",
   "display": "minimal-ui",
   "start_url": "/journaling/",
